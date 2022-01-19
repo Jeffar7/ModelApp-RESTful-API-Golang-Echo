@@ -1,0 +1,100 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Eventori RESTful API Test",
+      "version": "1",
+      "description": "OpenAPI for Eventori Test RESTful API",
+      "contact": {
+        "name": "Disnat Jeffar Manurung",
+        "email": "disnatmanurung@gmail.com"
+      },
+      "license": {
+        "name": "APACHE 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    },
+    "servers": [
+      {
+        "description": "Eventori RESTful API Test",
+        "url": "https://localhost:1234/" 
+  
+      }
+    ],
+    "paths": {
+      "/models/list": {
+        "get": {
+  
+          "tags": [
+            "Model List"
+          ],
+          "summary": "Get all Model",
+          "description": "Get all Model",
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "examples": {
+                    "success": {
+                      "value": [
+                        {
+                          "id": "2",
+                          "Model_name": "model 2",
+                          "Image_url": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+                          "Description" : "model 2 description",
+                          "Schedules": {
+                              "Id": 2,
+                              "Model_id": 2,
+                              "Schedule_date": "2021-12-13T00:00:00Z"
+                             }
+                        },
+                        {
+                          "Id": 5,
+                          "Model_name": "Model 5+6+7",
+                          "Image_url": "a",
+                          "Description": "Model 5+6+7",
+                          "Schedules": {
+                              "Id": 3,
+                              "Model_id": 5,
+                              "Schedule_date": "2022-12-12T00:00:00Z"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/models/create":{
+        "post": {
+          "tags": [
+            "Models Create"
+          ],
+          "summary": "Create new Model",
+          "description": "Create new Model to database",
+  
+          "responses": {
+            "200": {
+              "description": "Model Created Successfully",
+              "content": {
+                "application/json": {
+                  "examples": {
+                    "success": {
+                    "value": 
+                      {
+                       "status" : "success",
+                       "message" : "Model created successfully"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "459026aa-7bd4-4406-b366-aa3a4d387be8",
+		"name": "eventori-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE NEW MODEL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Model_name",
+							"value": "Model 5",
+							"type": "default"
+						},
+						{
+							"key": "Image_url",
+							"value": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+							"type": "default"
+						},
+						{
+							"key": "Description",
+							"value": "Description 5",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1234/models/create",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW SCHEDULE ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Model_id",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "Schedule_date",
+							"value": "2021-01-01",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1234/models/schedules/create",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"schedules",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF MODELS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/models/list",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST OF SCHEDULE BY MODEL ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/models/schedules/2",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"schedules",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MODEL BY MODEL_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/models/3",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE MODEL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Model_name",
+							"value": "Model 5+6+7+1",
+							"type": "default"
+						},
+						{
+							"key": "Image_url",
+							"value": "a",
+							"type": "default"
+						},
+						{
+							"key": "Description",
+							"value": "Model 5+6+7+1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1234/models/update/3",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"update",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE SCHEDULE BY SCHEDULE ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Model_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "Schedule_date",
+							"value": "2022-12-12",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1234/models/schedules/1",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"schedules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MODEL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/models/3",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE SCHEDULE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/models/schedules/2",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"models",
+						"schedules",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
